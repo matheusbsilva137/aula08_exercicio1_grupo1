@@ -1,14 +1,12 @@
 package br.digital.com
 
-public class Professor(var nome: String, var rd: Integer, listaDeAlunos: Curso){
+public class Professor(var nome: String, var rd: Int){
 
-    fun darAula(){
-        println("Professor $nome com o registro $rd ministrando a aula")
+    fun darAula(aula: Aula){
+        println("Professor $nome com o registro $rd ministrando a aula ${aula.materia.nome}")
     }
 
-    fun fazerChamada(listaDeAlunos: Curso){
-        for(aluno in listaDeAlunos){
-            println("O aluno $aluno está presente")
-        }
+    fun fazerChamada(turma: Turma){
+        for(aluno in turma.curso.listaDeAlunos) println("O aluno ${aluno.nome} está presente")
     }
 }

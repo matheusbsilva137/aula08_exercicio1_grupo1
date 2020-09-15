@@ -1,6 +1,6 @@
 package br.digital.com
 
-class Curso (var nome: String, var professorResponsavel: Professor{
+class Curso (var nome: String, var professorResponsavel: Professor) {
 
     val listaDeAlunos: MutableList<Aluno> = ArrayList()
     val listaDeAulas: MutableList<Aula> = ArrayList()
